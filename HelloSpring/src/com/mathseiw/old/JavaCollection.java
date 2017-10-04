@@ -1,4 +1,4 @@
-package com.mathseiw;
+package com.mathseiw.old;
 import java.util.*;
 
 public class JavaCollection {

@@ -1,4 +1,4 @@
-package com.mathseiw;
+package com.mathseiw.old;
 
 public class SpellChecker {
     public SpellChecker(){

@@ -1,8 +1,11 @@
 package com.tutorialspoint;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Student {
+    @Value("${10}")
     private Integer age;
-    private String name;
+    private String lalala;
     private Integer id;
 
     public void setAge(Integer age) {
@@ -11,11 +14,11 @@ public class Student {
     public Integer getAge() {
        return age;
     }
-    public void setName(String name) {
-       this.name = name;
+    public void setlalala(String lala) {
+       this.lalala = lala;
     }
-    public String getName() {
-       return name;
+    public String getlalala() {
+       return lalala;
     }
     public void setId(Integer id) {
        this.id = id;

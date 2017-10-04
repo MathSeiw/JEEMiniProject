@@ -23,7 +23,7 @@
          </tr>
          <tr>
             <td>Student Name</td>
-            <td>${student.name}</td>
+            <td>${student.lalala}</td>
          </tr>
       </table>  
    </body>

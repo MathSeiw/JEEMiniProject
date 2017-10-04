@@ -5,16 +5,11 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id = "helloWorld" class = "com.mathseiw.HelloWorld"
-      init-method = "init" destroy-method = "destroy">
-      <property name = "message" value = "Hello World!"/>
+   <!-- Definition for textEditor bean using inner bean -->
+   <bean id = "textEditor" class = "com.mathseiw.TextEditor">
+      <property name = "spellChecker">
+         <bean id = "spellChecker" class = "com.mathseiw.SpellChecker"/>
+      </property>
    </bean>
-
-   <bean id = "helloWorld2" class = "com.mathseiw.HelloWorld2"
-      init-method = "init" destroy-method = "destroy">
-      <property name = "message" value = "Hello2"/>
-   </bean>
-
-   <bean class = "com.mathseiw.InitHelloWorld" />
 
 </beans>

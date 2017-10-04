@@ -1,6 +1,9 @@
 package com.mathseiw;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class HelloWorld {
+    @Value("${Test Hello}")
     private String message;
 
     public void setMessage(String message){

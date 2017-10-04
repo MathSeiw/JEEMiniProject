@@ -1,18 +1,25 @@
 package com.mathseiw;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.*;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
    public static void main(String[] args) {
-      ApplicationContext ctx = 
-         new AnnotationConfigApplicationContext(HelloWorldConfig.class);
-   
-      HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
-      helloWorld.setMessage("Helloooooo");
-      helloWorld.getMessage();
+      ConfigurableApplicationContext context = 
+         new ClassPathXmlApplicationContext("Beans.xml");
+
+      // Let us raise a start event.
+      context.start();
       
-      HelloWorld helloWorld2 = ctx.getBean(HelloWorld.class);
-      helloWorld2.getMessage();
+      ApplicationContext ctx = 
+              new AnnotationConfigApplicationContext(HelloWorldConfig.class);
+        
+           HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
+      helloWorld.getMessage();
+
+      // Let us raise a stop event.
+      context.stop();
    }
 }
